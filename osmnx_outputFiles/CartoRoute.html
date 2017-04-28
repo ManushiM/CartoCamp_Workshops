@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster-src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_cbed41dba30c4326821750a3c970f2ad {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_cbed41dba30c4326821750a3c970f2ad" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var southWest = L.latLng(-90, -180);
+                var northEast = L.latLng(90, 180);
+                var bounds = L.latLngBounds(southWest, northEast);
+            
+
+            var map_cbed41dba30c4326821750a3c970f2ad = L.map(
+                                  'map_cbed41dba30c4326821750a3c970f2ad',
+                                  {center: [40.7179600397,-73.9732150009],
+                                  zoom: 1,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_2c26ea81e5e84891ae67bb3d172cc3ad = L.tileLayer(
+                'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    continuousWorld: false,
+                    noWrap: false,
+                    attribution: '(c) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (c) <a href="http://cartodb.com/attributions">CartoDB</a>, CartoDB <a href ="http://cartodb.com/attributions">attributions</a>',
+                    detectRetina: false
+                    }
+                ).addTo(map_cbed41dba30c4326821750a3c970f2ad);
+
+        
+    
+                var poly_line_9ed2211500cb498192acfeb5ca7fa2e8 = L.polyline(
+                    [[40.705177, -73.936002], [40.705868, -73.936234]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_9ed2211500cb498192acfeb5ca7fa2e8);
+            
+    
+                var poly_line_ce6f51f048d64eef8f00ceed429604e3 = L.polyline(
+                    [[40.705868, -73.936234], [40.705516, -73.938073]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_ce6f51f048d64eef8f00ceed429604e3);
+            
+    
+                var poly_line_d71a688d859f471db0ce2328cd3197e4 = L.polyline(
+                    [[40.705516, -73.938073], [40.7052512, -73.9394224]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_d71a688d859f471db0ce2328cd3197e4);
+            
+    
+                var poly_line_9a9f7fbbca3548fabfebe9d9520b75cb = L.polyline(
+                    [[40.7052512, -73.9394224], [40.7054909, -73.9394729]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_9a9f7fbbca3548fabfebe9d9520b75cb);
+            
+    
+                var poly_line_b9b502d41df34f8482fa84fae0a6e8a7 = L.polyline(
+                    [[40.7054909, -73.9394729], [40.7061438, -73.9395865]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_b9b502d41df34f8482fa84fae0a6e8a7);
+            
+    
+                var poly_line_e6e24b84226c4ccd8de42f02544ad2ce = L.polyline(
+                    [[40.7061438, -73.9395865], [40.70621, -73.939598]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_e6e24b84226c4ccd8de42f02544ad2ce);
+            
+    
+                var poly_line_4a2eb66f42cf4fa382a3e7b6c800bace = L.polyline(
+                    [[40.70621, -73.939598], [40.706918, -73.939715]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_4a2eb66f42cf4fa382a3e7b6c800bace);
+            
+    
+                var poly_line_72c0f6fe0c93437e9f46c776f0935e0c = L.polyline(
+                    [[40.706918, -73.939715], [40.707654, -73.939838]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_72c0f6fe0c93437e9f46c776f0935e0c);
+            
+    
+                var poly_line_618243d7fd134be9863d93694240ec18 = L.polyline(
+                    [[40.707654, -73.939838], [40.70839, -73.939958]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_618243d7fd134be9863d93694240ec18);
+            
+    
+                var poly_line_63f893514c4e4fe2b9fd17ee4a1e42ed = L.polyline(
+                    [[40.70839, -73.939958], [40.70823, -73.94164]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_63f893514c4e4fe2b9fd17ee4a1e42ed);
+            
+    
+                var poly_line_3388421d35ff46a1bab220263e13bed7 = L.polyline(
+                    [[40.70823, -73.94164], [40.708071, -73.943322]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_3388421d35ff46a1bab220263e13bed7);
+            
+    
+                var poly_line_923beb1fe6264dc5ac18c23e0bbeb155 = L.polyline(
+                    [[40.708071, -73.943322], [40.707911, -73.945006]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_923beb1fe6264dc5ac18c23e0bbeb155);
+            
+    
+                var poly_line_f248ae63257940f19cd35c7897b8927b = L.polyline(
+                    [[40.707911, -73.945006], [40.707754, -73.946656]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_f248ae63257940f19cd35c7897b8927b);
+            
+    
+                var poly_line_e5910bfc12244d74a61e5c794b5aee95 = L.polyline(
+                    [[40.707754, -73.946656], [40.707597, -73.948303]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_e5910bfc12244d74a61e5c794b5aee95);
+            
+    
+                var poly_line_0bb6048bc6f947fcaaf032cbb335204c = L.polyline(
+                    [[40.707597, -73.948303], [40.707391, -73.95053]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_0bb6048bc6f947fcaaf032cbb335204c);
+            
+    
+                var poly_line_2c8e5d0f838e4f24a70ca3930de12402 = L.polyline(
+                    [[40.707391, -73.95053], [40.70817, -73.95066]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_2c8e5d0f838e4f24a70ca3930de12402);
+            
+    
+                var poly_line_23bffbcf947e4ea6b39402888aefdfcb = L.polyline(
+                    [[40.70817, -73.95066], [40.708803, -73.95076]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_23bffbcf947e4ea6b39402888aefdfcb);
+            
+    
+                var poly_line_f38abd9cfd7a47b28e17b83190b5fd51 = L.polyline(
+                    [[40.708803, -73.95076], [40.7090392, -73.9508003]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_f38abd9cfd7a47b28e17b83190b5fd51);
+            
+    
+                var poly_line_afc6c35861014df2a616297fcb66c8a6 = L.polyline(
+                    [[40.7090392, -73.9508003], [40.7091373, -73.950817]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_afc6c35861014df2a616297fcb66c8a6);
+            
+    
+                var poly_line_66c3685e2f374eec84c39774a5a5e52b = L.polyline(
+                    [[40.7091373, -73.950817], [40.709716, -73.95236]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_66c3685e2f374eec84c39774a5a5e52b);
+            
+    
+                var poly_line_c878bb1cb6a346a397771b502fba156b = L.polyline(
+                    [[40.709716, -73.95236], [40.710264, -73.953856]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_c878bb1cb6a346a397771b502fba156b);
+            
+    
+                var poly_line_5a855ec3493c4089b9e07b8e751c6b3e = L.polyline(
+                    [[40.710264, -73.953856], [40.710479, -73.9544215], [40.7106358, -73.9544656]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_5a855ec3493c4089b9e07b8e751c6b3e);
+            
+    
+                var poly_line_b15115617497446f8c63a51a5fe179ae = L.polyline(
+                    [[40.7106358, -73.9544656], [40.7106706, -73.9546312], [40.7106486, -73.9549139], [40.7106312, -73.9550634]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_b15115617497446f8c63a51a5fe179ae);
+            
+    
+                var poly_line_0d69db9433814d539d49c5512552cd05 = L.polyline(
+                    [[40.7106312, -73.9550634], [40.7106205, -73.9551824], [40.7106067, -73.9554925], [40.7106379, -73.9558783], [40.7106713, -73.9562615], [40.7106697, -73.956484]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_0d69db9433814d539d49c5512552cd05);
+            
+    
+                var poly_line_c5f4a41c9ba34a238d4e7a0e4439edc3 = L.polyline(
+                    [[40.7106697, -73.956484], [40.7104981, -73.9570508]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_c5f4a41c9ba34a238d4e7a0e4439edc3);
+            
+    
+                var poly_line_ddb5560f89894d9d897ec77aac73c953 = L.polyline(
+                    [[40.7104981, -73.9570508], [40.7104547, -73.9572724], [40.7104035, -73.9576617], [40.710365, -73.9580676], [40.7103402, -73.9583332]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_ddb5560f89894d9d897ec77aac73c953);
+            
+    
+                var poly_line_d53fa1084bcb4ca1b610251eae2fbd9b = L.polyline(
+                    [[40.7103402, -73.9583332], [40.7103093, -73.9586211], [40.7103448, -73.9587667]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_d53fa1084bcb4ca1b610251eae2fbd9b);
+            
+    
+                var poly_line_26564699ae5a459a82589de85e4bf1a6 = L.polyline(
+                    [[40.7103448, -73.9587667], [40.7103397, -73.9588691], [40.7103363, -73.9589384], [40.7103345, -73.9591064], [40.7103153, -73.9593149], [40.7102712, -73.9595717], [40.7102339, -73.9599276], [40.7102249, -73.9600514], [40.7102183, -73.9601843], [40.7102369, -73.9604968], [40.7102889, -73.9607972]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_26564699ae5a459a82589de85e4bf1a6);
+            
+    
+                var poly_line_ce50299a0f144b69888bffb5a9a2750e = L.polyline(
+                    [[40.7102889, -73.9607972], [40.7103636, -73.9611588]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_ce50299a0f144b69888bffb5a9a2750e);
+            
+    
+                var poly_line_3a2d53ce27b94747b5c9795282423f7f = L.polyline(
+                    [[40.7103636, -73.9611588], [40.7105545, -73.961795], [40.7114142, -73.9646127]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_3a2d53ce27b94747b5c9795282423f7f);
+            
+    
+                var poly_line_f74a9e19d1cf4a8e87969ab439f84e47 = L.polyline(
+                    [[40.7114142, -73.9646127], [40.7118354, -73.9658906], [40.7121293, -73.9669112], [40.7152245, -73.9771211], [40.7155931, -73.978277], [40.7173688, -73.9841411]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_f74a9e19d1cf4a8e87969ab439f84e47);
+            
+    
+                var poly_line_690e172fb6fe4a3aa40c91e7c3eecff5 = L.polyline(
+                    [[40.7173688, -73.9841411], [40.7175747, -73.9847538], [40.7178291, -73.9855794], [40.7178745, -73.9856514], [40.7179086, -73.9856633], [40.7179415, -73.9856588], [40.717971, -73.98565]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_690e172fb6fe4a3aa40c91e7c3eecff5);
+            
+    
+                var poly_line_a7b107d619c1426189a85111e15d2ec9 = L.polyline(
+                    [[40.717971, -73.98565], [40.7190825, -73.9850756]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_a7b107d619c1426189a85111e15d2ec9);
+            
+    
+                var poly_line_53debe982df74bd19c546fdf587660b4 = L.polyline(
+                    [[40.7190825, -73.9850756], [40.720233, -73.984472]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_53debe982df74bd19c546fdf587660b4);
+            
+    
+                var poly_line_2c35a63eb5cb46caa60f6897f1f53ba9 = L.polyline(
+                    [[40.720233, -73.984472], [40.7213388, -73.9839101]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_2c35a63eb5cb46caa60f6897f1f53ba9);
+            
+    
+                var poly_line_399121d3c5ce4558b13b1ef376f3add9 = L.polyline(
+                    [[40.7213388, -73.9839101], [40.7213679, -73.9840096]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_399121d3c5ce4558b13b1ef376f3add9);
+            
+    
+                var poly_line_c0768f272af245bd9e32b3baa717664b = L.polyline(
+                    [[40.7213679, -73.9840096], [40.7215659, -73.9846445]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_c0768f272af245bd9e32b3baa717664b);
+            
+    
+                var poly_line_729bbdf7560f4ff2ad702bd152e7ca46 = L.polyline(
+                    [[40.7215659, -73.9846445], [40.7215976, -73.9847461]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_729bbdf7560f4ff2ad702bd152e7ca46);
+            
+    
+                var poly_line_e817cdc60b474f8a857b53846e2d32da = L.polyline(
+                    [[40.7215976, -73.9847461], [40.7216281, -73.9848438]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_e817cdc60b474f8a857b53846e2d32da);
+            
+    
+                var poly_line_0714703f68e14c0980935e7e24f26a03 = L.polyline(
+                    [[40.7216281, -73.9848438], [40.7218255, -73.9854961], [40.7218471, -73.9855673]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_0714703f68e14c0980935e7e24f26a03);
+            
+    
+                var poly_line_cce17dfe04a242df8af0b2cb39bb1274 = L.polyline(
+                    [[40.7218471, -73.9855673], [40.7219165, -73.98553]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_cce17dfe04a242df8af0b2cb39bb1274);
+            
+    
+                var poly_line_8e53d904b2dc44958cee625c0d52c55d = L.polyline(
+                    [[40.7219165, -73.98553], [40.7220324, -73.9854682]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_8e53d904b2dc44958cee625c0d52c55d);
+            
+    
+                var poly_line_37cea750974e43718075d1f68a7c86eb = L.polyline(
+                    [[40.7220324, -73.9854682], [40.7222461, -73.986154]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_37cea750974e43718075d1f68a7c86eb);
+            
+    
+                var poly_line_b8b8ff246d8e4392b464d34a7083af9d = L.polyline(
+                    [[40.7222461, -73.986154], [40.7222803, -73.9862637]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_b8b8ff246d8e4392b464d34a7083af9d);
+            
+    
+                var poly_line_f7901893a5164c318ae3f23d4217edf2 = L.polyline(
+                    [[40.7222803, -73.9862637], [40.7223206, -73.9863929]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_f7901893a5164c318ae3f23d4217edf2);
+            
+    
+                var poly_line_af1e15300aea4708b09af42d14891b32 = L.polyline(
+                    [[40.7223206, -73.9863929], [40.7225403, -73.9870975]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_af1e15300aea4708b09af42d14891b32);
+            
+    
+                var poly_line_085434aa9ef34c91a09644069b9308a0 = L.polyline(
+                    [[40.7225403, -73.9870975], [40.7226501, -73.9870844]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_085434aa9ef34c91a09644069b9308a0);
+            
+    
+                var poly_line_b40fce807a32470897aff80fc3e203d9 = L.polyline(
+                    [[40.7226501, -73.9870844], [40.7226898, -73.9870797], [40.7229692, -73.9877313]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_b40fce807a32470897aff80fc3e203d9);
+            
+    
+                var poly_line_2cd2a9ef4c124afbb49f9581c8fc97fc = L.polyline(
+                    [[40.7229692, -73.9877313], [40.7232182, -73.9883119]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_2cd2a9ef4c124afbb49f9581c8fc97fc);
+            
+    
+                var poly_line_1bc14d26288e45e68c4d76e294784164 = L.polyline(
+                    [[40.7232182, -73.9883119], [40.723277, -73.988451]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_1bc14d26288e45e68c4d76e294784164);
+            
+    
+                var poly_line_ab90709f8b884eb2b6b05556a5f15778 = L.polyline(
+                    [[40.723277, -73.988451], [40.7233364, -73.9885919]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_ab90709f8b884eb2b6b05556a5f15778);
+            
+    
+                var poly_line_73f2e6d0f9ea4740890d1a3cf7bf7885 = L.polyline(
+                    [[40.7233364, -73.9885919], [40.723352, -73.988629], [40.7242516, -73.9907394]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_73f2e6d0f9ea4740890d1a3cf7bf7885);
+            
+    
+                var poly_line_0a0b1ff34c6c40c38aecabf4fcb22d03 = L.polyline(
+                    [[40.7242516, -73.9907394], [40.7242892, -73.9908277]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_0a0b1ff34c6c40c38aecabf4fcb22d03);
+            
+    
+                var poly_line_0e57ab1b797a45918fbc6c0a27e2fc32 = L.polyline(
+                    [[40.7242892, -73.9908277], [40.724614, -73.9916085]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_0e57ab1b797a45918fbc6c0a27e2fc32);
+            
+    
+                var poly_line_2d9b08340eb746899a5666115c3b9d8e = L.polyline(
+                    [[40.724614, -73.9916085], [40.7248794, -73.9922645]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_2d9b08340eb746899a5666115c3b9d8e);
+            
+    
+                var poly_line_dab57a0f92774befa392333cc6fb74f5 = L.polyline(
+                    [[40.7248794, -73.9922645], [40.7252143, -73.9921428]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_dab57a0f92774befa392333cc6fb74f5);
+            
+    
+                var poly_line_9ba048deb5f44717b41fb3fd5bc4d28f = L.polyline(
+                    [[40.7252143, -73.9921428], [40.7256194, -73.9919974]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_9ba048deb5f44717b41fb3fd5bc4d28f);
+            
+    
+                var poly_line_44b51d5c1e6a4024aa97fffc09ad2670 = L.polyline(
+                    [[40.7256194, -73.9919974], [40.7263629, -73.9917229]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_44b51d5c1e6a4024aa97fffc09ad2670);
+            
+    
+                var poly_line_c850c8311c7841bdb7efffd6e93efa38 = L.polyline(
+                    [[40.7263629, -73.9917229], [40.726419, -73.9918561]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_c850c8311c7841bdb7efffd6e93efa38);
+            
+    
+                var poly_line_51b337a958fb4cbf88f98ed49094d818 = L.polyline(
+                    [[40.726419, -73.9918561], [40.727289, -73.99364]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_51b337a958fb4cbf88f98ed49094d818);
+            
+    
+                var poly_line_03d9befc79354777a0f0c50181d726dc = L.polyline(
+                    [[40.727289, -73.99364], [40.727564, -73.99419]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_03d9befc79354777a0f0c50181d726dc);
+            
+    
+                var poly_line_7577f5dbd56b4c5fb8bd79db72fcc157 = L.polyline(
+                    [[40.727564, -73.99419], [40.7278217, -73.9947585]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_7577f5dbd56b4c5fb8bd79db72fcc157);
+            
+    
+                var poly_line_a4a397d694ac47cbb996103d83ba61db = L.polyline(
+                    [[40.7278217, -73.9947585], [40.7278645, -73.9948806], [40.728194, -73.995593]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_a4a397d694ac47cbb996103d83ba61db);
+            
+    
+                var poly_line_98d5ef11e12c49c9a4b8f2882915f811 = L.polyline(
+                    [[40.728194, -73.995593], [40.7284471, -73.9961262]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_98d5ef11e12c49c9a4b8f2882915f811);
+            
+    
+                var poly_line_5530b11ab2804605aaaf285e3f9e2c30 = L.polyline(
+                    [[40.7284471, -73.9961262], [40.728551, -73.996345]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_5530b11ab2804605aaaf285e3f9e2c30);
+            
+    
+                var poly_line_1827d0de3a5c4158b106c0c971d13cc2 = L.polyline(
+                    [[40.728551, -73.996345], [40.7289272, -73.9971089]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_1827d0de3a5c4158b106c0c971d13cc2);
+            
+    
+                var poly_line_9fe3964b990640b28ae0364f9c29f6b9 = L.polyline(
+                    [[40.7289272, -73.9971089], [40.7295094, -73.9966145]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_9fe3964b990640b28ae0364f9c29f6b9);
+            
+    
+                var poly_line_d640603011254000827a3b411b9ce710 = L.polyline(
+                    [[40.7295094, -73.9966145], [40.7295629, -73.9965691]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_d640603011254000827a3b411b9ce710);
+            
+    
+                var poly_line_9849ec6af6744af7abb359d829032fe2 = L.polyline(
+                    [[40.7295629, -73.9965691], [40.7296183, -73.9965218]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_9849ec6af6744af7abb359d829032fe2);
+            
+    
+                var poly_line_f8c4439ec8594f92981042fb19f2e83b = L.polyline(
+                    [[40.7296183, -73.9965218], [40.7296529, -73.9965911]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_f8c4439ec8594f92981042fb19f2e83b);
+            
+    
+                var poly_line_226a34d858e04239b0e6dc6c91b6a75a = L.polyline(
+                    [[40.7296529, -73.9965911], [40.7298448, -73.9966529], [40.7299467, -73.9966857]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_226a34d858e04239b0e6dc6c91b6a75a);
+            
+    
+                var poly_line_32aedb9016d6444ba2aeb4deab38b647 = L.polyline(
+                    [[40.7299467, -73.9966857], [40.7300956, -73.9967399], [40.7301898, -73.9967742], [40.730359, -73.9968358], [40.7304411, -73.9968669], [40.7304961, -73.9968857]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_32aedb9016d6444ba2aeb4deab38b647);
+            
+    
+                var poly_line_f60284d0a9dd431c86e75aa875441cc8 = L.polyline(
+                    [[40.7304961, -73.9968857], [40.7305603, -73.9970223], [40.7306175, -73.9971439], [40.730664, -73.9971461]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_f60284d0a9dd431c86e75aa875441cc8);
+            
+    
+                var poly_line_100d88eae98e4b7d8952beb93c04a1f6 = L.polyline(
+                    [[40.730664, -73.9971461], [40.7307279, -73.9972753]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_100d88eae98e4b7d8952beb93c04a1f6);
+            
+    
+                var poly_line_329f7af8b7ef463398c6fe2b79e39356 = L.polyline(
+                    [[40.7307279, -73.9972753], [40.7306925, -73.9973212], [40.7306693, -73.9973792], [40.7306605, -73.9974436], [40.730667, -73.9975086], [40.7306881, -73.9975679]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_329f7af8b7ef463398c6fe2b79e39356);
+            
+    
+                var poly_line_3b28c8b967aa40f28198b66c3d7d88d9 = L.polyline(
+                    [[40.7306881, -73.9975679], [40.7307214, -73.9976155], [40.7307641, -73.9976477], [40.7308121, -73.9976615], [40.730861, -73.9976556], [40.7309063, -73.9976306]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_3b28c8b967aa40f28198b66c3d7d88d9);
+            
+    
+                var poly_line_de5784342ded4815ac25febc7394ad89 = L.polyline(
+                    [[40.7309063, -73.9976306], [40.7309641, -73.997744]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_de5784342ded4815ac25febc7394ad89);
+            
+    
+                var poly_line_67704d7b56b94ab88218070918070452 = L.polyline(
+                    [[40.7309641, -73.997744], [40.7309529, -73.9978217], [40.7311485, -73.9982001], [40.7312073, -73.9982218]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_67704d7b56b94ab88218070918070452);
+            
+    
+                var poly_line_5203dea4a2344ead91e7283e3e6e8eba = L.polyline(
+                    [[40.7312073, -73.9982218], [40.7312251, -73.9982538]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_5203dea4a2344ead91e7283e3e6e8eba);
+            
+    
+                var poly_line_d25ae9ba589a4bcb9453f62029bf4825 = L.polyline(
+                    [[40.7312251, -73.9982538], [40.7313041, -73.9982843], [40.7318504, -73.9985004]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_d25ae9ba589a4bcb9453f62029bf4825);
+            
+    
+                var poly_line_7bea574b53d34266b7b9e745048a539c = L.polyline(
+                    [[40.7318504, -73.9985004], [40.7320562, -73.9985856], [40.7321412, -73.9985997]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_7bea574b53d34266b7b9e745048a539c);
+            
+    
+                var poly_line_cfea294a1f934bab8d0676d7324fa8b9 = L.polyline(
+                    [[40.7321412, -73.9985997], [40.7321895, -73.9985601]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_cfea294a1f934bab8d0676d7324fa8b9);
+            
+    
+                var poly_line_0b8951d6ef1a469f9a3a0b5617e4cfff = L.polyline(
+                    [[40.7321895, -73.9985601], [40.732215, -73.998612]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_0b8951d6ef1a469f9a3a0b5617e4cfff);
+            
+    
+                var poly_line_fa84e915e67c4a6b884bfd58d07332c3 = L.polyline(
+                    [[40.732215, -73.998612], [40.732929, -74.000066]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_fa84e915e67c4a6b884bfd58d07332c3);
+            
+    
+                var poly_line_4f3ea95d82194e7c91bf1ae8667fcec8 = L.polyline(
+                    [[40.732929, -74.000066], [40.7335729, -73.9995902]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_4f3ea95d82194e7c91bf1ae8667fcec8);
+            
+    
+                var poly_line_c57a9e4473e84394926cfbb331004af2 = L.polyline(
+                    [[40.7335729, -73.9995902], [40.7336634, -73.9995234]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_c57a9e4473e84394926cfbb331004af2);
+            
+    
+                var poly_line_96a0e99eb35847d3b3fa281ad9a8680e = L.polyline(
+                    [[40.7336634, -73.9995234], [40.7338239, -73.9995747]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_96a0e99eb35847d3b3fa281ad9a8680e);
+            
+    
+                var poly_line_97458b42068b4c62bf51d15c6731d444 = L.polyline(
+                    [[40.7338239, -73.9995747], [40.73407, -73.999653]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_97458b42068b4c62bf51d15c6731d444);
+            
+    
+                var poly_line_2c24b83fd3304ec98565a615774ad5a3 = L.polyline(
+                    [[40.73407, -73.999653], [40.7341264, -73.9996743]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_2c24b83fd3304ec98565a615774ad5a3);
+            
+    
+                var poly_line_4c150c63d1ea4a178a6c51bb95d0e3b1 = L.polyline(
+                    [[40.7341264, -73.9996743], [40.7342309, -73.9997137], [40.7342725, -73.9997331], [40.7343109, -73.9997543], [40.7343394, -73.999769], [40.7343702, -73.9997878], [40.734688, -73.999973]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_4c150c63d1ea4a178a6c51bb95d0e3b1);
+            
+    
+                var poly_line_4875ac36ba7a402f97b8a6ae55e93c61 = L.polyline(
+                    [[40.734688, -73.999973], [40.735307, -74.000356]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_4875ac36ba7a402f97b8a6ae55e93c61);
+            
+    
+                var poly_line_315f3e8d649c46ceaa91402137e9670a = L.polyline(
+                    [[40.735307, -74.000356], [40.735926, -74.000722]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_315f3e8d649c46ceaa91402137e9670a);
+            
+    
+                var poly_line_c0820bb3ccb04780a91e8d80279194b3 = L.polyline(
+                    [[40.735926, -74.000722], [40.736564, -74.001095]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_c0820bb3ccb04780a91e8d80279194b3);
+            
+    
+                var poly_line_9a516086184146a19bd1f105b546d46d = L.polyline(
+                    [[40.736564, -74.001095], [40.737168, -74.001463]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_9a516086184146a19bd1f105b546d46d);
+            
+    
+                var poly_line_8113cbe67f674359918ccafc8a8bd34b = L.polyline(
+                    [[40.737168, -74.001463], [40.7376586, -74.0017606]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_8113cbe67f674359918ccafc8a8bd34b);
+            
+    
+                var poly_line_7785ac03003948f1a613fdf54212b93d = L.polyline(
+                    [[40.7376586, -74.0017606], [40.73813, -74.002033]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_7785ac03003948f1a613fdf54212b93d);
+            
+    
+                var poly_line_b985de61e4f7415aa5889ef024de0c43 = L.polyline(
+                    [[40.73813, -74.002033], [40.7382552, -74.0021073], [40.738749, -74.0024005]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_b985de61e4f7415aa5889ef024de0c43);
+            
+    
+                var poly_line_8146f835821b4222ab02723f701b2919 = L.polyline(
+                    [[40.738749, -74.0024005], [40.7390306, -74.0025705]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_8146f835821b4222ab02723f701b2919);
+            
+    
+                var poly_line_2162f2ed7f464ba8adf138a74e690fa6 = L.polyline(
+                    [[40.7390306, -74.0025705], [40.7393657, -74.0027728]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_2162f2ed7f464ba8adf138a74e690fa6);
+            
+    
+                var poly_line_ae8daad00e7e4b919f8f4df39315162a = L.polyline(
+                    [[40.7393657, -74.0027728], [40.7397447, -74.0024906]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_ae8daad00e7e4b919f8f4df39315162a);
+            
+    
+                var poly_line_49d089d26cc342529f3bd31619345fcc = L.polyline(
+                    [[40.7397447, -74.0024906], [40.7404441, -74.0019892]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_49d089d26cc342529f3bd31619345fcc);
+            
+    
+                var poly_line_6971e9d1623a45b2a780dd4fd2ab1434 = L.polyline(
+                    [[40.7404441, -74.0019892], [40.74108, -74.001555]],
+                    {
+                        color: '#cc0000',
+                        weight: 5,
+                        opacity: 1,
+                        });
+                map_cbed41dba30c4326821750a3c970f2ad.addLayer(poly_line_6971e9d1623a45b2a780dd4fd2ab1434);
+            
+    
+                
+
+                map_cbed41dba30c4326821750a3c970f2ad.fitBounds(
+                    [[40.705177, -74.0027728], [40.74108, -73.936002]],
+                    {}
+                    );
+            
+</script>
