@@ -1,0 +1,251 @@
+<html>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        .sentiment {
+             margin: auto;
+             text-align: center;
+        }
+        
+        #content {
+            font: 14px/18px Arial, Helvetica, sans-serif;
+        }
+        
+        #tooltip {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(255,255,255,0.8);
+                padding: 5;
+                border: solid 1px black;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+
+</style>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <body id="content">
+        <div>
+            <h1>Attitudes regarding Syrian Refugees: Sentiment Analysis Using Twitter</h1>
+        </div>
+        <div>
+            <svg width="1100" height="35">
+                <g id="sentiment">
+                    <text dx="450"
+                      dy="20"
+                      style="font-size: 20">Welcoming</text>
+                    <text dx="590"
+                      dy="20"
+                      style="font-size: 20">Neutral</text>
+                    <text dx="700"
+                      dy="20"
+                      style="font-size: 20">Hostile</text>
+                </g>
+               
+            </svg> 
+        </div>
+       <div id="plots">
+         <svg width="1500" height="500">
+             <g id="scatter"></g>
+             <g id="pie"></g>  
+        </svg>
+        </div>
+        <div id="tooltip"></div>
+    </body>
+    <script>
+        
+        var div1 = d3.select("#sentiment");
+        var welcoming = div1.append("circle")
+           .attr("r", 10)
+           .attr("cx",430)
+           .attr("cy", 15)
+           .attr("fill", "royalblue");
+
+        var neutral = div1.append("circle")
+           .attr("r", 10)
+           .attr("cx",570)
+           .attr("cy", 15)
+           .attr("fill", "#e6b800");
+        
+        var hostile = div1.append("circle")
+           .attr("r", 10)
+           .attr("cx",680)
+           .attr("cy", 15)
+           .attr("fill", "red");
+    var margin = {top: 80, right: 20, bottom: 40, left: 140},
+    width = 450,
+    height = 350;
+
+// set x 
+var xValue = function(d) {return d.asylum2016;}, 
+    xScale = d3.scale.linear().range([0, width]), 
+    xMap = function(d) { return xScale(xValue(d));}, 
+    xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+
+// set y
+var yValue = function(d) { return d.sentiment;}, 
+    yScale = d3.scale.linear().range([height, 0]), 
+    yMap = function(d) { return yScale(yValue(d));},
+    yAxis = d3.svg.axis().scale(yScale).orient("left");
+
+// add the graph canvas to the body of the webpage
+var svg = d3.select("#scatter").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// load data
+d3.csv("https://raw.githubusercontent.com/manushim/infoviz_refugee_project/master/webPages/scatterInput.csv", function(error, data) {
+    if (error) throw error;
+
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.asylum2016 = +d.asylum2016;
+    d.sentiment = +d.sentiment;
+  });
+
+  // don't want dots overlapping axis, so add in buffer to data domain
+  xScale.domain([-10, 1300]);
+  yScale.domain([-0.099, 0.115]);
+
+  // x-axis Values
+  svg.append("g")
+      .attr("class", "xaxis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("x", width)
+      .attr("y", -4)
+      .style("text-anchor", "end")
+    
+    svg.selectAll(".xaxis text")  // select all the text elements for the xaxis
+          .attr("transform", function(d) {
+             return "translate(" + this.getBBox().height*-2 + "," + this.getBBox().height + ")rotate(-45)";
+         });
+    
+    //x-axis Label
+    svg.append("g")
+      .attr("class", "xaxis")
+      .attr("transform", "translate(0," + height + ")")
+    .append("text")
+      .attr("class", "label")
+      .attr("x", width)
+      .attr("y", -4)
+      .style("text-anchor", "end")
+      .text("Refugee Count");
+
+  // y-axis
+  svg.append("g")
+      .attr("class", "yaxis")
+      .call(yAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Sentiment");
+    
+    //Add Title
+    svg.append("text")
+        .attr("x", (width / 2) - 20)             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "20px") 
+        .style("font-weight", 800) 
+        .text("Sentiment Score vs Refugee Count per Country");
+    
+   // draw dots
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 3.5)
+      .attr("cx", xMap)
+      .attr("cy", yMap)
+      .style("fill", function(d) { if(d.sentiment < -0.01)
+                                        {return "red";}
+                                else if(d.sentiment > -0.01 && d.sentiment < 0.01)
+                                        {return "#e6b800";}
+                                else if(d.sentiment > 0.01)
+                                        {return "royalblue";}})
+        //Enabling tooltip
+        .on('mouseenter', function(d, i) { d3.select("#tooltip").style({top: d3.event.clientY + 5, left: d3.event.clientX + 5, visibility: "visible", opacity: 1 })
+                    d3.select("#tooltip").text(d.country);
+                    highlight(d.country);                               
+                    })
+                    .on('mouseleave', function(x, i) {
+                         d3.select("#tooltip").style({visibility: "hidden", opacity: 0 }) 
+                         unHighlight();
+                       
+                    });
+});  
+    </script>
+    NOTE: Germany being an outlier taking 27146 Syrian refugees so far in 2016, has been deliberately excluded from the scatter plot.
+    <script>
+        //For pie chart
+        
+        var w = 350;
+        var h = 350;
+        var r = h/2;
+        var color = d3.scale.ordinal()
+                      .range(["red", "#e6b800", "royalblue"]);
+
+        var data = [{"label":"Hostile", "value":28.57}, 
+		            {"label":"Neutral", "value":28.57}, 
+		            {"label":"Welcoming", "value":42.85}];
+
+
+        var vis = d3.select('#pie')
+                    .append("svg")
+                    .data([data])
+                    .attr("width", w+900)
+                    .attr("height", h+900)
+                    .append("svg:g")
+                    .attr("transform", "translate(1000,250)");
+
+        var pie = d3.layout.pie().value(function(d){return d.value;});
+
+        // declare an arc generator function
+        var arc = d3.svg.arc().outerRadius(r);
+
+        // select paths, use arc generator to draw
+        var arcs = vis.selectAll("g.slice").data(pie).enter()
+                      .append("svg:g")
+                      .attr("class", "slice");
+        
+        arcs.append("svg:path")
+            .attr("fill", function(d, i){
+        return color(i);
+    })
+    .attr("d", function (d) {
+        // log the result of the arc generator to show how cool it is :)
+        console.log(arc(d));
+        return arc(d);
+    });
+
+        // add the text
+        arcs.append("svg:text").attr("transform", function(d){
+            d.innerRadius = 0;
+			d.outerRadius = r;
+            return "translate(" + arc.centroid(d) + ")";}).attr("text-anchor", "middle")
+                                                          .style("font-size", "16px")
+                                                          .style("fill", "white")
+                                                          .text( function(d, i) {
+                                                                return data[i].label +" ("+ data[i].value +" %)";}
+		                                              );
+        //Add Title
+        arcs.append("text")
+        .attr("x", 5)             
+        .attr("y", -205)
+        .attr("text-anchor", "middle")  
+        .style("font-size", "20px") 
+        .style("font-weight", 800) 
+        .text("Distribution of Countries by Sentiment Score");
+    </script>
+</html>
