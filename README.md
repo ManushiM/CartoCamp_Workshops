@@ -19,7 +19,7 @@ Outputs generated while executing the scripts in the notebook have been saved in
 
 In order to run these scripts on your own computer, clone this repository and install the necessary packages (Networkx, Geopandas, Matplotlib, Rtree, OSMnx, Pandas, Numpy, Descartes, Folium).
 
-Another segment of this same workshop involved a Carto employee instructing on ways to extract routing data using Google Maps API. Contents for that sengment can be found [here](https://github.com/CartoCamp/workshops/tree/master/2017-04-28-carto-camp-routing)
+Another segment of this same workshop involved a Carto employee instructing on ways to extract routing data using Google Maps API. Contents for that segment can be found [here](https://github.com/CartoCamp/workshops/tree/master/2017-04-28-carto-camp-routing)
 
 ## 26th May 2017 - Introduction to D3
 
@@ -30,3 +30,7 @@ This workshop focuses on understanding D3 and its components, and using Citibike
 * Understanding Data Binding, Path and Transformations
 * Going through code to build these [charts](https://manushim.github.io/CartoCamp_Workshops/Workshop2_May2017/code/staticCharts)
 * Going through code to build this bike route D3 [animation](https://manushim.github.io/CartoCamp_Workshops/Workshop2_May2017/code/citibike_animation) based on trip id.
+
+The html code for the charts and the animation are in the 'code' folder. And data used to build the bike route animation is in the 'data' folder.
+
+In order to run these scripts on your own computer, clone this repository and follow the 'NOTE' at the bottom of the [tutorial notebook](https://github.com/ManushiM/CartoCamp_Workshops/blob/master/Workshop2_May2017/CartoCamp_D3.ipynb).
