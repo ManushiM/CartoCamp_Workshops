@@ -19,7 +19,7 @@ Outputs generated while executing the scripts in the notebook have been saved in
 
 In order to run these scripts on your own computer, clone this repository and install the necessary packages (Networkx, Geopandas, Matplotlib, Rtree, OSMnx, Pandas, Numpy, Descartes, Folium).
 
-Another segment of this same workshop involved a Carto employee instructing on ways to extract routing data using Google Maps API. Contents for that segment can be found [here](https://github.com/CartoCamp/workshops/tree/master/2017-04-28-carto-camp-routing)
+Another segment of this same workshop involved a Carto employee instructing on ways to extract routing data using Google Maps API. Contents for that segment can be found [here](https://github.com/CartoCamp/workshops/tree/master/2017-04-28-carto-camp-routing).
 
 ## 26th May 2017 - Introduction to D3
 
