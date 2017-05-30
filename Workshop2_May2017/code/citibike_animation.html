@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+    <script src="https://d3js.org/d3.v3.min.js" type="text/javascript"></script>
     <style>
     html,
     body {
@@ -90,7 +90,7 @@
     //function that shows animation corresponding to trip_id
     function showAnimation(trip){
     d3.selectAll("g > *").remove();
-    d3.json("citibike_one_month.geojson", function(collection) {
+    d3.json("https://raw.githubusercontent.com/ManushiM/CartoCamp_Workshops/master/Workshop2_May2017/data/citibike_one_month.geojson", function(collection) {
         
     //    console.log(collection.features);
         var distinct = []
